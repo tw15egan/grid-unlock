@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Grid (un)Lock</title>
-
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="css/grid.min.css">
   <script src="https://use.typekit.net/eei7lge.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -27,7 +31,7 @@
       font-family: "museo-sans",sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 20px;
       background-color: #DEE5E5;
     }
 
@@ -41,19 +45,70 @@
       justify-content: center;
     }
 
+    .logo {
+      margin-bottom: 0;
+    }
+
     .small {
       display: inline-block;
       font-size: 2rem;
+      font-weight: 300;
     }
 
     .subheader {
-
+      font-weight: 300;
+      font-size: 1rem;
+      padding-left: 1rem;
     }
 
     section {
       background-color: #FFFBFA;
       color: #525252;
-      padding: 2em;
+      padding: 1rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .first-header {
+      padding-top: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    a {
+      display: inline-block;
+      color: #99DDC8;
+      padding: 0 1rem 0 0;
+      text-decoration: none;
+    }
+
+    a > span {
+      font-size: .6rem;
+    }
+
+    code {
+      font-family: 'Inconsolata';
+      font-size: 18px;
+    }
+
+    code > span {
+      color: #7BC7C0;
+    }
+
+
+    .hljs-name {
+      color: #EF5663;
+    }
+
+
+
+    .hljs-string {
+      color: #B3D77F;
     }
 
     footer {
@@ -61,16 +116,17 @@
       height: 100px;
     }
 
-    .row + .row {
+    .row {
       min-height: 3em;
-      margin-top: 1em;
+      margin-top: .25rem;
     }
 
     .col {
       min-height: 40px;
+      font-size: 14px;
       padding: .5em;
       border-radius: .25em;
-      background-color: #34D1BF;
+      background-color: #99DDC8;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -79,11 +135,52 @@
 </head>
 <body>
   <header class="grid-container">
-    <h1>Grid<p class="small">(un)</p>Lock</h1>
-    <p class="subheader">A frustration free grid system.</p>
+    <h1 class="logo">Grid<span class="small">(un)</span>Lock</h1>
+    <span class="subheader">A frustration free grid system.</span>
   </header>
 
   <section class="grid-container">
+    <div class="row">
+      <h1 class="first-header">Getting Started:</h1>
+      <p>
+        To get started, download the css file and link it to your webpage.
+      </p>
+      <a href="https://raw.githubusercontent.com/tw15egan/grid-unlock/master/css/grid.css" download>CSS <span>809b</span></a>
+      <a href="https://raw.githubusercontent.com/tw15egan/grid-unlock/master/css/grid.min.css" download>CSS (Minified) <span>634b</span></a>
+    </div>
+  </section>
+  <section class="grid-container">
+    <div class="row">
+      <h1>Usage</h1>
+      <p>
+        To use the grid, structure your content like this:
+      </p>
+      <pre>
+        <code class="html">
+          &lt;section class="grid-container"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col col-12"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        </code>
+      </pre>
+
+      <p>
+        To have multiple columns, just add multiple column divs. These <i>must</i> add up to 12.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;section class="grid-container"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col col-6"&gt;&lt;/div&gt;
+              &lt;div class="col col-6"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="grid-container">
+    <h1>Example:</h1>
     <div class="row">
       <div class="col col-12">col col-12</div>
     </div>
