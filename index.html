@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid (un)Lock</title>
+
+  <link rel="stylesheet" href="css/grid.min.css">
+  <script src="https://use.typekit.net/eei7lge.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: "museo-sans",sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      background-color: #DEE5E5;
+    }
+
+    header {
+      background-color: #525252;
+      height: 100px;
+      color: #FFFBFA;
+      padding: 0 0 0 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .small {
+      display: inline-block;
+      font-size: 2rem;
+    }
+
+    .subheader {
+
+    }
+
+    section {
+      background-color: #FFFBFA;
+      color: #525252;
+      padding: 2em;
+    }
+
+    footer {
+      background-color: #525252;
+      height: 100px;
+    }
+
+    .row + .row {
+      min-height: 3em;
+      margin-top: 1em;
+    }
+
+    .col {
+      min-height: 40px;
+      padding: .5em;
+      border-radius: .25em;
+      background-color: #34D1BF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="grid-container">
+    <h1>Grid<p class="small">(un)</p>Lock</h1>
+    <p class="subheader">A frustration free grid system.</p>
+  </header>
+
+  <section class="grid-container">
+    <div class="row">
+      <div class="col col-12">col col-12</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-11">col col-11</div>
+      <div class="col col-1">col col-1</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-10">col col-10</div>
+      <div class="col col-2">col col-2</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-9">col col-9</div>
+      <div class="col col-3">col col-3</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-8">col col-8</div>
+      <div class="col col-4">col col-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-7">col col-7</div>
+      <div class="col col-5">col col-5</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-6">col col-6</div>
+      <div class="col col-6">col col-6</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-4">col col-4</div>
+      <div class="col col-4">col col-4</div>
+      <div class="col col-4">col col-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-3">col col-3</div>
+      <div class="col col-3">col col-3</div>
+      <div class="col col-3">col col-3</div>
+      <div class="col col-3">col col-3</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-2">col col-2</div>
+      <div class="col col-2">col col-2</div>
+      <div class="col col-2">col col-2</div>
+      <div class="col col-2">col col-2</div>
+      <div class="col col-2">col col-2</div>
+      <div class="col col-2">col col-2</div>
+    </div>
+  </section>
+
+  <footer class="grid-container">
+
+  </footer>
+</body>
+</html>
